@@ -11,7 +11,7 @@ import argparse
 
 def save_result(result, result_dir, filename, remove_duplicate):
     """
-    결과를 JSON 파일로 저장합니다.
+    Saves the result as a JSON file.
     """
     result_file = os.path.join(result_dir, f'{filename}.json')
     json.dump(result, open(result_file, 'w'))
@@ -21,7 +21,7 @@ def save_result(result, result_dir, filename, remove_duplicate):
 @torch.no_grad()
 def evaluate(model, data_loader, device, config, args):
     """
-    모델을 평가하고 생성된 캡션을 반환합니다.
+    Evaluates the model and returns the generated captions.
     """
     model.eval()
     result = []
@@ -39,7 +39,7 @@ def evaluate(model, data_loader, device, config, args):
 
 def load_checkpoint(checkpoint_path, model):
     """
-    체크포인트를 불러와 모델의 상태를 복원합니다.
+    Loads a checkpoint and restores the model state.
     """
     print(f"Loading checkpoint from {checkpoint_path}")
     checkpoint = torch.load(checkpoint_path, map_location='cpu')
@@ -50,7 +50,7 @@ def load_checkpoint(checkpoint_path, model):
 
 def evaluate_from_checkpoint(config_path, checkpoint_path, result_dir, args, device='cuda:0'):
     """
-    체크포인트를 불러와 모델을 초기화하고 평가합니다.
+    Loads a checkpoint, initializes the model, and performs evaluation.
     """
     device = torch.device(device)
 
@@ -106,4 +106,4 @@ if __name__ == '__main__':
 
     for epoch in range(args.start_epoch, args.end_epoch):
         checkpoint_path = os.path.join(root_dir, experiment_name, f"checkpoint_epoch_{epoch}.pth")
-        evaluate_from_checkpoint(config_path, checkpoint_path, result_dir, args=args, device=args.device)
+        evaluate_from_checkpoint(config_path, checkpoint_path, result_dir, args=args, device=args.device)  
