@@ -2,7 +2,8 @@
 
 ## Overview
 
-SurGen-Net is a generative model designed for Surgical Visual Question Answering (VQA) with structured text generation. This model leverages advanced deep learning techniques to improve captioning and VQA performance in surgical contexts.
+Existing discriminative approaches in surgical Visual Question Answering (VQA) exhibit key limitations, including susceptibility to data distribution bias, overfitting, ineffective utilization of raw text supervision, and a lack of deep cross-modal understanding. Additionally, their reliance on fixed answer sets makes them impractical for real-world clinical applications. To address these challenges, we propose \textbf{SurGen-Net}, a generative model designed to enhance multimodal learning and contextual reasoning in surgical VQA. Unlike conventional models that treat question-answer pairs independently, our model is trained to generate a structured format, allowing it to integrate all question-answer interactions and develop a more comprehensive understanding of surgical scenes.
+SurGen-Net comprises a Surgical Vision Encoder and a Surgical Captioner, utilizing raw text supervision and an advanced multimodal fusion mechanism to construct rich textual representations of surgical environments. Evaluation on the PitVQA dataset demonstrates consistent performance gains over existing models, particularly in Instruments and Position categories, highlighting its ability to enhance surgical tool recognition and spatial reasoning.
 
 ## Installation
 
