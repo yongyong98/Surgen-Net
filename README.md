@@ -1,5 +1,5 @@
 # SurGen-Net: A Generative Approach for Surgical VQA with Structured Text Generation
-![SurGen-Net Architecture](SurGen_Net.pdf)
+<embed src="Surgen-Net.pdf" width="800px" height="600px" />
 
 ## Overview
 
