@@ -5,14 +5,6 @@
 Existing discriminative approaches in surgical Visual Question Answering (VQA) exhibit key limitations, including susceptibility to data distribution bias, overfitting, ineffective utilization of raw text supervision, and a lack of deep cross-modal understanding. Additionally, their reliance on fixed answer sets makes them impractical for real-world clinical applications. To address these challenges, we propose \textbf{SurGen-Net}, a generative model designed to enhance multimodal learning and contextual reasoning in surgical VQA. Unlike conventional models that treat question-answer pairs independently, our model is trained to generate a structured format, allowing it to integrate all question-answer interactions and develop a more comprehensive understanding of surgical scenes.
 SurGen-Net comprises a Surgical Vision Encoder and a Surgical Captioner, utilizing raw text supervision and an advanced multimodal fusion mechanism to construct rich textual representations of surgical environments. Evaluation on the PitVQA dataset demonstrates consistent performance gains over existing models, particularly in Instruments and Position categories, highlighting its ability to enhance surgical tool recognition and spatial reasoning.
 
-## Installation
-
-Ensure you have the required dependencies installed before running the training or evaluation scripts.
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Training
 
 Run the following command to train the model:
@@ -20,8 +12,8 @@ Run the following command to train the model:
 ```bash
 python train_caption_pitvqa.py --gpu 0 \
                                --config "./configs/caption_vqa_format.yaml" \
-                               --experiment_name "20250305_mt_132_single_gpu_Pit_Caption_VQA_Format_epoch10_wrong" \
-                               --format_style "refined_description_250225" \
+                               --experiment_name "" \
+                               --format_style "" \
                                --max_length 132 \
                                --max_epoch 10  
 ```
@@ -32,12 +24,12 @@ To evaluate the model, use the following command:
 
 ```bash
 python evaluate.py --config "./configs/caption_vqa_format.yaml" \
-                   --experiment_name "20250305_mt_132_single_gpu_Pit_Caption_VQA_Format_epoch10_wrong" \
+                   --experiment_name "" \
                    --device "cuda:0" \
                    --start_epoch 4 \
                    --end_epoch 10 \
                    --max_length 132 \
-                   --format_style 'refined_description_250225'  
+                   --format_style ''  
 ```
 
 ## Citation
