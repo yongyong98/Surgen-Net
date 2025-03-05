@@ -19,18 +19,27 @@ python train_caption_pitvqa.py --gpu 0 \
                                --max_epoch 10  
 ```
 
-## Evaluation
+## Generation
 
-To evaluate the model, use the following command:
+To generate Question and Answers using the model, use the following command:
 
 ```bash
-python evaluate.py --config "./configs/caption_vqa_format.yaml" \
+python generate.py --config "./configs/caption_vqa_format.yaml" \
                    --experiment_name "" \
                    --device "cuda:0" \
-                   --start_epoch 4 \
-                   --end_epoch 10 \
+                   --start_epoch 0 \
+                   --end_epoch 1 \
                    --max_length 132 \
-                   --format_style ''  
+                   --format_style ''
+```
+
+## Evaluation
+
+To evaluate the model, use the following command: 
+
+```bash
+python evaluate.py --dir "C:\Users\kyuhw\Desktop\work\PitVQA-main\output\Caption_pitvqa\20250225_mt_132_single_gpu_Pit_Caption_refined_description_epoch10_question(SOTA)" \
+                   --epoch 5 --gt_csv "C:\Users\kyuhw\Desktop\work\PitVQA-Dataset\image_caption\test_pit_qa_revision_refined_data_250225_wrong.csv"
 ```
 
 ## Citation
