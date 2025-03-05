@@ -38,8 +38,9 @@ python generate.py --config "./configs/caption_vqa_format.yaml" \
 To evaluate the model, use the following command: 
 
 ```bash
-python evaluate.py --dir "C:\Users\kyuhw\Desktop\work\PitVQA-main\output\Caption_pitvqa\20250225_mt_132_single_gpu_Pit_Caption_refined_description_epoch10_question(SOTA)" \
-                   --epoch 5 --gt_csv "C:\Users\kyuhw\Desktop\work\PitVQA-Dataset\image_caption\test_pit_qa_revision_refined_data_250225_wrong.csv"
+python evaluate.py --dir "" \
+                   --epoch 5 \
+                   --gt_csv ""
 ```
 
 ## Citation
