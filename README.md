@@ -55,6 +55,9 @@ If you use SurGen-Net in your research, please cite our work:
   year      = {2025}
 }
 ```
+## Acknowledgments
+
+This work builds upon the [BLIP (Bootstrapped Language-Image Pretraining)](https://github.com/salesforce/BLIP) framework. We sincerely thank the authors of BLIP for making their implementation publicly available, which served as the foundation for our Surgical Captioner module.
 
 ## Contact
 
